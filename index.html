@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Joc del penjat</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var vides=7
+           
+            
+            function Comprovar(){
+            if((document.getElementById("valor").value>="a")&&(document.getElementById("valor").value<="m"))
+             {   
+                alert("Has acertado");
+                document.getElementById("lletres").innerHTML=document.getElementById("valor").value;
+            }
+            else
+            {
+                alert("Has fallado");
+                vides=vides-1;
+                document.getElementById("vida").innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+vides
+                 dolentes=dolentes+document.getElementById("valor").value;
+             }
+             }
+             
+        </script>
+        
+   
+        
+    <h1 onmouseover="this.style.color='blue';" 
+    onmouseout="this.style.color='black'">Prototip joc del penjat </h1>
+     <input type="text" placeholder="Escriu una lletra miniscula" id="valor">
+     <button onclick="Comprovar();">Comprovar</button>
+    
+    
+    <h2 onmouseover="this.style.color='white';" 
+    onmouseout="this.style.color='black'">Paraula </h2>
+    <p id="lletres">_ _ _ _ _ _ _</p>
+    
+    
+    
+    <h2 onmouseover="this.style.color='green';" 
+    onmouseout="this.style.color='black'">Vides </h2>
+     <p id="vida">0</p>
+    
+    <h2 onmouseover="this.style.color='yellow';" 
+    onmouseout="this.style.color='black'">Lletres </h2>
+     <p>zzzzzzz</p>
+    
+     <h3 onmouseover="this.style.color='red';" 
+         onmouseout="this.style.color='black'">Credits: </h3> <p> <a href="https://prosselloe.wordpress.com/">Visita la pagina de mi profesor!</a> </p>
+         
+         
+         
+         
+    </head>
+    <body style="background: #ffddcc">
+       
+        <div> </div>
+    </body>
+</html>
