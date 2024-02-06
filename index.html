@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>Joc del penjat</title>
@@ -14,17 +8,48 @@ and open the template in the editor.
            
             
             function Comprovar(){
-            if((document.getElementById("valor").value>="a")&&(document.getElementById("valor").value<="m"))
+             var lletra= document.getElementById("valor").value;
+             document.getElementById("valor").value="";
+             lletra=lletra.toLowerCase();
+             
+             switch(lletra){
+                case"á":
+                case"à": 
+                    lletra="a";
+                    break;
+                    
+                 case"é":
+                 case"è": 
+                    lletra="e";
+                    break;
+                    
+                 case"í":
+                 case"ì": 
+                    lletra="i";
+                    break;
+                    
+                 case"ó":
+                 case"ò": 
+                    lletra="o";
+                    break;
+                    
+                case"ú":
+                case"ù": 
+                    lletra="u";
+                    break;
+             }
+            if((lletra>="a")&&(lletra<="m"))
              {   
                 alert("Has acertado");
-                document.getElementById("lletres").innerHTML=document.getElementById("valor").value;
+              document.getElementById("lletres").innerHTML = 
+                      document.getElementById("lletres").innerHTML + lletra;
             }
             else
             {
                 alert("Has fallado");
                 vides=vides-1;
                 document.getElementById("vida").innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+vides
-                 dolentes=dolentes+document.getElementById("valor").value;
+                 dolentes=dolentes+lletra;
              }
              }
              
@@ -38,7 +63,7 @@ and open the template in the editor.
      <button onclick="Comprovar();">Comprovar</button>
     
     
-    <h2 onmouseover="this.style.color='white';" 
+    <h2 onmouseover="this.style.color='purple';" 
     onmouseout="this.style.color='black'">Paraula </h2>
     <p id="lletres">_ _ _ _ _ _ _</p>
     
@@ -50,16 +75,16 @@ and open the template in the editor.
     
     <h2 onmouseover="this.style.color='yellow';" 
     onmouseout="this.style.color='black'">Lletres </h2>
-     <p>zzzzzzz</p>
+     <p>_ _ _ _ _ _ _</p>
     
      <h3 onmouseover="this.style.color='red';" 
-         onmouseout="this.style.color='black'">Credits: </h3> <p> <a href="https://prosselloe.wordpress.com/">Visita la pagina de mi profesor!</a> </p>
+         onmouseout="this.style.color='black'">Credits: <a href="https://prosselloe.wordpress.com/">PERE ROSELLÓ HUB!</a> </h3>
          
          
          
          
     </head>
-    <body style="background: #ffddcc">
+    <body style="background:">
        
         <div> </div>
     </body>
