@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Joc del penjat</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+    
+        <script>
+
+        </script>
+        
+   
+    </head>
+    <body style="background-image:url(img/Jungle.png); 
+          background-size: 1300px 1000px; background-repeat:no-repeat" onload="Amaga();"> 
+               
+    <h1 onmouseover="this.style.color='blue';" 
+    onmouseout="this.style.color='white'">Prototip joc del penjat </h1>
+     <input type="text" placeholder="Escriu una lletra miniscula" id="valor"
+     maxlength="1">
+     
+     <button onclick="Comprovar();">Comprovar</button>
+     <p id="Comprovar"></p>
+    
+    
+    
+    <h2 onmouseover="this.style.color='purple';" 
+    onmouseout="this.style.color='white'">Paraula </h2>
+    <p id="lletres">_ _ _ _ _ _ _</p>
+    
+    
+    
+    <h2 onmouseover="this.style.color='green';" 
+    onmouseout="this.style.color='white'">Vides </h2>
+     <p id="vida">0</p>
+    
+    <h2 onmouseover="this.style.color='yellow';" 
+    onmouseout="this.style.color='white'">Lletres </h2>
+     <p id="dolentes">_ _ _ _ _ _ _</p>
+    
+     <h3 onmouseover="this.style.color='red';" 
+         onmouseout="this.style.color='white'">Credits: <a href="https://prosselloe.wordpress.com/">PERE ROSELLÓ HUB!</a> </h3>
+         
+         
+        <img src="img/ahorcado_0.png" id="ahorcado_0" style="width:280px;height:270px;"
+            onclick='document.getElementById("ahorcado_0").hidden=true;
+            document.getElementById("ahorcado_6").hidden=false;'/>
+   
+        <img src="img/ahorcado_1.png" id="ahorcado_1" style="width:280px;height:270px;"
+              onclick='document.getElementById("ahorcado_1").hidden=true;
+              document.getElementById("ahorcado_0").hidden=false;'/>
+            
+        <img src="img/ahorcado_2.png" id="ahorcado_2" style="width:280px;height:270px;"
+            onclick='document.getElementById("ahorcado_2").hidden=true;
+            document.getElementById("ahorcado_1").hidden=false;'/>  
+        
+        <img src="img/ahorcado_3.png" id="ahorcado_3" style="width:280px;height:270px;"
+            onclick='document.getElementById("ahorcado_3").hidden=true;
+            document.getElementById("ahorcado_2").hidden=false;'/>
+        
+        <img src="img/ahorcado_4.png" id="ahorcado_4" style="width:280px;height:270px;"
+            onclick='document.getElementById("ahorcado_4").hidden=true;
+            document.getElementById("ahorcado_3").hidden=false;'/>
+        
+        <img src="img/ahorcado_5.png" id="ahorcado_5" style="width:280px;height:270px;"
+            onclick='document.getElementById("ahorcado_5").hidden=true;
+            document.getElementById("ahorcado_4").hidden=false;'/>
+        
+        <img src="img/ahorcado_6.png" id="ahorcado_6" style="width:280px;height:270px;"
+            onclick='document.getElementById("ahorcado_6").hidden=true;
+            document.getElementById("ahorcado_5").hidden=false;'/>         
+         
+    </body>
+</html>
