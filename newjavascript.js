@@ -1,4 +1,9 @@
-  var vides=7
+ /* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+             var vides=7
            
             
             function Comprovar(){
@@ -34,34 +39,37 @@
              }
             if((lletra>="a")&&(lletra<="m"))
              {   
-                Alert("Has acertado");
-              document.getElementById("lletres").innerHTML = 
+                alert("Has acertado");
+                document.getElementById("miau").play;
+                
+                document.getElementById("lletres").innerHTML = 
                       document.getElementById("lletres").innerHTML + lletra;
             }
             else
             {
-                Alert("Has fallado");
+                alert("Has fallado"); 
+                document.getElementById("boom_cloud").play;
+                
                 document.getElementById("dolentes").innerHTML = 
                       document.getElementById("dolentes").innerHTML + lletra;
                 vides=vides-1;
-                document.getElementById("vida").innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+vides
-                 dolentes=dolentes+lletra;
+                document.getElementById("vida").innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+vides;
+                 dolentes=dolentes+ lletra;
+                   
              }
              
-             //comprova si has perdut! o has guanyat!
          if(vides<=0){
-             window.alert("i has perdut!");  
+             window.alert("i has perdut!");   document.getElementById("cat_fight").play;
+             
              AturaTot();
          }
         
          else{
              if(paraula.lenght >=14){
-                window.alert("i has gunyat");
+                window.alert("i has gunyat"); document.getElementById("bell_toll").play;
                 AturaTot();
              
           }
-        MostraImg();
-        document.getElementById().play;
         
         
         }
