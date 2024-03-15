@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Joc del penjat</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+    
+        <script>
+
+        </script>
+        
+   
+    </head>
+  
+               
+    <h1 onmouseover="this.style.color='blue';" 
+    onmouseout="this.style.color='white'">Prototip joc del penjat </h1>
+     <input type="text" placeholder="Escriu una lletra miniscula" id="valor"
+     maxlength="1">
+     
+     <button onclick="Comprovar();">Comprovar</button>
+     <p id="Comprovar"></p>
+    
+    
+    
+    <h2 onmouseover="this.style.color='purple';" 
+    onmouseout="this.style.color='white'">Paraula </h2>
+    <p id="lletres">_ _ _ _ _ _ _</p>
+    
+    
+    
+    <h2 onmouseover="this.style.color='green';" 
+    onmouseout="this.style.color='white'">Vides </h2>
+     <p id="vida">0</p>
+    
+    <h2 onmouseover="this.style.color='yellow';" 
+    onmouseout="this.style.color='white'">Lletres </h2>
+     <p id="dolentes">_ _ _ _ _ _ _</p>
+    
+     <h3 onmouseover="this.style.color='red';" 
+         onmouseout="this.style.color='white'">Credits: <a href="https://prosselloe.wordpress.com/">PERE ROSELLÓ HUB!</a> </h3>
+           
+         
+    </body>
+</html>
