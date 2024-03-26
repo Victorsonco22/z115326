@@ -1,10 +1,27 @@
- /* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-             var vides=7
+   /* global Idioma */
+
+            var vides=7;
+            var Paraula=[];
+            var lletres=["_","_","_","_","_","_","_"];
            
+            //Llista de paraules
+            var paraules=["cordes","fetje","forca","jutges","jutjat","menjen","menjat","quinta","forca"];
+            var pistes=["A la quinta forca","A ca un penjat, no hi amoinis cordes","setze jutjes d'un jutjat, menjen fetge d'un penjat"];
+            var paraulapistes=[1,2,0,2,2,2,1,0,2];
+            
+            //Escull una paraula aleatoriament
+            var aleatori=Math.floor(Math.random()*paraules.length);
+            var paraula=paraules[aleatori];
+            var pista=pistes[paraules[aleatori]];
+            
+            //marcam cada lletra amb "_"
+            for (var i=0;i<paraula.lenght;i++){
+                 Paraula[i]="_";
+         
+            }
+            
+            
+            
             
             function Comprovar(){
              var lletra= document.getElementById("valor").value;
@@ -37,36 +54,52 @@
                     lletra="u";
                     break;
              }
-            if((lletra>="a")&&(lletra<="m"))
-             {   
+             var pos= paraula.indexOf(lletra);
+            if((pos !=-1) && (lletra !="")){
+                 document.getElementById("miau").play();
+                 //document.getElementById("disfraz3").hidden=true;
+                 //document.getElementById("disfraz2").hidden=false;
+                 //document.getElementById("disfraz1").hidden=true;
+                 
+                 for(var i=pos;i<paraula.lenght;i++){
+                     if(paraula[i]==lletra){
+                        Paraula[i]=lletra;
+                     }
+                    }
+                  
+            document.getElementById("paraula").innerHTML = Paraula;
+            else if (((lletra>="a")&&(lletra<="z")))||
+                      (lletra=="ñ")||(lletra=="-")
+              
+              
+              
+              
+              
+              
+              
+              
                 alert("Has acertado");
-                document.getElementById("miau").play;
-                
-                document.getElementById("lletres").innerHTML = 
+              document.getElementById("lletres").innerHTML = 
                       document.getElementById("lletres").innerHTML + lletra;
             }
             else
             {
-                alert("Has fallado"); 
-                document.getElementById("boom_cloud").play;
-                
+                alert("Has fallado");
                 document.getElementById("dolentes").innerHTML = 
                       document.getElementById("dolentes").innerHTML + lletra;
                 vides=vides-1;
                 document.getElementById("vida").innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+vides;
-                 dolentes=dolentes+ lletra;
-                   
+                dolentes=dolentes+ lletra;
              }
              
          if(vides<=0){
-             window.alert("i has perdut!");   document.getElementById("cat_fight").play;
-             
+             window.alert("i has perdut!");  
              AturaTot();
          }
         
          else{
              if(paraula.lenght >=14){
-                window.alert("i has gunyat"); document.getElementById("bell_toll").play;
+                window.alert("i has gunyat");
                 AturaTot();
              
           }
@@ -116,4 +149,4 @@
     function AturaTot(){
            document.getElementById("valor").disabled=true; 
          document.getElementById("Comprovar").disabled=true;
-    }  
+    }    
