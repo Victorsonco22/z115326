@@ -1,4 +1,4 @@
-   /* global Idioma */
+ /* global Idioma */
 
             var vides=7;
             var Paraula=[];
@@ -69,8 +69,11 @@
                   
             document.getElementById("paraula").innerHTML = Paraula;
             else if (((lletra>="a")&&(lletra<="z")))||
-                      (lletra=="ñ")||(lletra=="-")
+                      (lletra=="ñ")||(lletra=="-")||
+                      (lletra=="ç")||(lletra=="")
               
+              //Lletres.[7-vides]=lletra
+               //document.getElementById("lletres").innerHTML = Lletres;
               
               
               
@@ -149,4 +152,5 @@
     function AturaTot(){
            document.getElementById("valor").disabled=true; 
          document.getElementById("Comprovar").disabled=true;
+    }  
     }    
