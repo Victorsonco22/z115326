@@ -1,7 +1,7 @@
- /* global Idioma */
+/* global Idioma */
 
             var vides=7;
-            var Paraula=[];
+            var Paraula=["_","_","_","_","_","_","_"];
             var lletres=["_","_","_","_","_","_","_"];
            
             //Llista de paraules
@@ -15,15 +15,17 @@
             var pista=pistes[paraules[aleatori]];
             
             //marcam cada lletra amb "_"
-            for (var i=0;i<paraula.lenght;i++){
-                 Paraula[i]="_";
-         
+            for (var i=0;i<paraula.length;i++){
+                 Paraula[i]="_";         
             }
             
             
             
             
             function Comprovar(){
+                
+            alert(paraula);
+             
              var lletra= document.getElementById("valor").value;
              document.getElementById("valor").value="";
              lletra=lletra.toLowerCase();
@@ -54,36 +56,36 @@
                     lletra="u";
                     break;
              }
-             var pos= paraula.indexOf(lletra);
+            var pos=paraula.indexOf(lletra);
             if((pos !=-1) && (lletra !="")){
-                 document.getElementById("miau").play();
+                 //document.getElementById("miau").play();
                  //document.getElementById("disfraz3").hidden=true;
                  //document.getElementById("disfraz2").hidden=false;
                  //document.getElementById("disfraz1").hidden=true;
                  
-                 for(var i=pos;i<paraula.lenght;i++){
+                 for(var i=pos;i<paraula.length;i++){
                      if(paraula[i]==lletra){
                         Paraula[i]=lletra;
                      }
                     }
-                  
-            document.getElementById("paraula").innerHTML = Paraula;
-            else if (((lletra>="a")&&(lletra<="z")))||
+                          
+                document.getElementById("lletres").innerHTML = Paraula;
+        
+            /*
+            else if (((lletra>="a")&&(lletra<="z"))||
                       (lletra=="ñ")||(lletra=="-")||
-                      (lletra=="ç")||(lletra=="")
+                      (lletra=="ç")||(lletra=="")) {
               
               //Lletres.[7-vides]=lletra
                //document.getElementById("lletres").innerHTML = Lletres;
-              
-              
-              
-              
-              
-              
-              
+            */  
+         
                 alert("Has acertado");
+                
+            /*    
               document.getElementById("lletres").innerHTML = 
                       document.getElementById("lletres").innerHTML + lletra;
+            */
             }
             else
             {
@@ -153,4 +155,4 @@
            document.getElementById("valor").disabled=true; 
          document.getElementById("Comprovar").disabled=true;
     }  
-    }    
+        
