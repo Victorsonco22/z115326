@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html>
     <head>
         <title>Joc del penjat</title>
@@ -5,12 +11,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css.css">   
         <script src="newjavascript.js"></script>   
+        <script src="js/alasql.js"></script>
+        <script src="js/sql.js"></script>
+        <script src="gamma.js.js"></script>
     </head>
     <body style="background-image:url(img/Desert.png); 
           background-size:640px 480px; background-repeat:no-repeat" onload="Amaga();"> 
-     
+
     <h1 onmouseover="this.style.color='blue';" 
     onmouseout="this.style.color='white'">Prototip joc del penjat </h1>
+        
+                 <select name="Idiomes" id="Idiomes" onchange="CanviarIdioma(this.value)" title="Select">
+                 <option value="ca">ca</option>
+                 <option value="es">es</option>
+                 <option value="en">en</option>
+                 <option value="fr">fr</option>
+                 <option value="de">de</option>
+                 <option value="it">it</option>         
+
+                 </select>
+     
      <input type="text" placeholder="Escriu una lletra miniscula" id="valor"
      maxlength="1">
      
@@ -18,16 +38,14 @@
      <p id="Comprovar"></p>
     
     
-    
     <h2 onmouseover="this.style.color='purple';" 
     onmouseout="this.style.color='white'">Paraula </h2>
     <p id="lletres">_ _ _ _ _ _ _</p>
     
     
-    
     <h2 onmouseover="this.style.color='green';" 
     onmouseout="this.style.color='white'">Vides </h2>
-     <p id="vida">0</p>
+     <p id="vida">7</p>
     
     <h2 onmouseover="this.style.color='yellow';" 
     onmouseout="this.style.color='white'">Lletres </h2>
@@ -65,5 +83,17 @@
             onclick='document.getElementById("ahorcado_6").hidden=true;
             document.getElementById("ahorcado_5").hidden=false;'/>         
          
+     <div id="audios">
+         
+        <audio id="mistery"><source src="audio/mystery.mp3" type="audio/mpeg"></audio>
+        <audio id="cheer"><source src="audio/cheer.mp3" type="audio/mpeg"></audio>
+        <audio id="clock_ticking"><source src="audio/clock_ticking.mp3" type="audio/mpeg"></audio>
+        <audio id="miau"><source src="audio/miau.mp3" type="audio/mpeg"></audio>
+        <audio id="cat_fight"><source src="audio/cat-fight.mp3" type="audio/mpeg"></audio>
+        <audio id="boom_cloud"> <source src="audio/boom_cloud.mp3" type="audio/mpeg"> </audio>
+        <audio id="bell_tollx3"><source src="audio/bell_toll_x3.mp3" type="audio/mpeg"> </audio>
+        <audio id="bell_toll"> <source src="audio/bell_toll.mp3" type="audio/mpeg"></audio>
+         
+     </div>        
     </body>
 </html>
