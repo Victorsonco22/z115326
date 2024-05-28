@@ -1,4 +1,5 @@
 
+            
              /* global Idioma, TblTextosGUI */
 
 
@@ -189,7 +190,20 @@
             [], function(idiomes) {Print_Data(Idiomes = idiomes.pop());}
             //[], function(idiomes) {SQL_TblTextosGUI(IdIdioma, idiomes.pop());}
         );
+
+        alasql('ATTACH SQLITE DATABASE penjat("db/penjat.db"); USE penjat; \n\
+                SELECT Paraula,Pista \n\ \n\
+                FROM TblParaules INNER JOIN TblPistes \n\
+                    ON TblParaules.IdPista=TblPistes.IdPista \n\
+                WHERE TblParaules.IdIdioma="'+ IdIdioma +'";',
+            [], function(taula) {Print_Data(Taula = taula.pop());}
+            //[], function(taula) {SQL_TblTextosGUI(IdIdioma, idiomes.pop());}
+        
+        );
   } 
+        
+        
+        
         
         function SQL_TblTextosGUI(IdIdioma,TblTextosGUI){
             Idiomes=TblTextosGUI;
