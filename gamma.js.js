@@ -291,8 +291,8 @@
         
         document.title=Idioma.Titol;
         document.getElemntById("Versio").innerHTML=Idioma.Versio;
-        document.getElemntById("lletra").placeholder=Idioma.Input;
-        document.getElemntById("comprovar").innerHTML=Idioma.Comprovar;
+        document.getElemntById("valor").placeholder=Idioma.Input;
+        document.getElemntById("Comprovar").innerHTML=Idioma.Comprovar;
     }
 
     // Funció per carregar la base de dades penjat.db
