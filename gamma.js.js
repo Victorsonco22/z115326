@@ -1,20 +1,5 @@
 /* global Idioma, TblTextosGUI */
-
-
-
-           
-             const Idiomes_dft=[];
-             var Idiomes=Idiomes_dft;
-             
-             function Canviaridioma(IdIdioma){
-                if((IdIdioma!="ca")&&(IdIdioma!="es")){
-             }
-             alaWeb_SQLite(IdIdioma);
-             Idioma=Idiomes.fin(Idioma=>Idioma.Ididioma==IdIdioma);
-             
-             
-             
-          
+       
              var vides=7;
              var Paraula=[];
              var lletres=["_","_","_","_","_","_","_"];
@@ -23,20 +8,20 @@
             var paraules=["cordes","fetje","forca","jutges","jutjat","menjen","menjat","quinta","forca"];
             var pistes=["A la quinta forca","A ca un penjat, no hi amoinis cordes","setze jutjes d'un jutjat, menjen fetge d'un penjat"];
             var paraulapistes=[1,2,0,2,2,2,1,0,2];
-            
+           
             //Escull una paraula aleatoriament
             var aleatori=Math.floor(Math.random()*paraules.length);
             var Paraula=paraules[aleatori];
             var pista=pistes[paraules[aleatori]];
-            
+           
             //marcam cada lletra amb "_"
-            for (var i=0;i<paraula.lenght,i++){
+            for (var i=0;i<paraula.lenght;i++) {
                  Paraula[i]="-";
          
             }
-            
-        
-                // Simulam una Taula de ParaulesPistes, similar a la consulta a la base de dades, amb un array d'objectes
+           
+       
+    // Simulam una Taula de ParaulesPistes, similar a la consulta a la base de dades, amb un array d'objectes
     const Taula_dft = [
         // Deixam per defecte les paraules i pistes en Català
         {"Paraula": "cordes", "Pista": "A ca un penjat, no hi anomenis cordes"},
@@ -50,8 +35,8 @@
         {"Paraula": "setze", "Pista": "Setze jutges d'un jutjat mengen fetge d'un penjat"}
     ];
     var Taula = Taula_dft;
-    
-     // Diferents idiomes per la GUI
+   
+    // Diferents idiomes per la GUI
     const Idiomes_dft = [
         {
             "IdIdioma": "ca",
@@ -157,8 +142,8 @@
         }
     ]
     var Idiomes = Idiomes_dft;
-            
-            
+           
+           
             function Comprovar(){
              var lletra= document.getElementById("valor").value;
              document.getElementById("valor").value="";
@@ -166,27 +151,27 @@
              
              switch(lletra){
                 case"á":
-                case"à": 
+                case"à":
                     lletra="a";
                     break;
-                    
+                   
                  case"é":
-                 case"è": 
+                 case"è":
                     lletra="e";
                     break;
-                    
+                   
                  case"í":
-                 case"ì": 
+                 case"ì":
                     lletra="i";
                     break;
-                    
+                   
                  case"ó":
-                 case"ò": 
+                 case"ò":
                     lletra="o";
                     break;
-                    
+                   
                 case"ú":
-                case"ù": 
+                case"ù":
                     lletra="u";
                     break;
              }
@@ -203,17 +188,17 @@
                         Paraula[i]=lletra;
                      }
                     }
-                  
                  
-                
+                 
+               
                 alert("Has acertado");
-              document.getElementById("lletres").innerHTML = 
+              document.getElementById("lletres").innerHTML =
                       document.getElementById("lletres").innerHTML + lletra;
             }
             else
             {
                 alert("Has fallado");
-                document.getElementById("dolentes").innerHTML = 
+                document.getElementById("dolentes").innerHTML =
                       document.getElementById("dolentes").innerHTML + lletra;
                 vides=vides-1;
                 document.getElementById("vida").innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+vides;
@@ -224,45 +209,45 @@
              window.alert("i has perdut!");  
              AturaTot();
          }
-        
+       
          else{
              if(paraula.lenght >=14){
                 window.alert("i has gunyat");
                 AturaTot();
              
           }
-        
-        
+       
+       
         }
         }
-    function MostraImg(){ 
+    function MostraImg(){
       switch (vides) {
-        case 6: 
-            document.getElementById("ahorcado_5").hidden=false; 
-            document.getElementById("ahorcado_6").hidden=true;   
+        case 6:
+            document.getElementById("ahorcado_5").hidden=false;
+            document.getElementById("ahorcado_6").hidden=true;  
             break;
         case 5:
-            document.getElementById("ahorcado_5").hidden=false; 
-            document.getElementById("ahorcado_6").hidden=true;   
+            document.getElementById("ahorcado_5").hidden=false;
+            document.getElementById("ahorcado_6").hidden=true;  
             break;
         case 4:
-            document.getElementById("ahorcado_4").hidden=false; 
-            document.getElementById("ahorcado_5").hidden=true;   
+            document.getElementById("ahorcado_4").hidden=false;
+            document.getElementById("ahorcado_5").hidden=true;  
             break;
         case 3:
-            document.getElementById("ahorcado_3").hidden=false; 
-            document.getElementById("ahorcado_4").hidden=true;   
+            document.getElementById("ahorcado_3").hidden=false;
+            document.getElementById("ahorcado_4").hidden=true;  
             break;    
         case 2:
-            document.getElementById("ahorcado_2").hidden=false; 
-            document.getElementById("ahorcado_3").hidden=true;   
+            document.getElementById("ahorcado_2").hidden=false;
+            document.getElementById("ahorcado_3").hidden=true;  
             break;
         case 1:
-            document.getElementById("ahorcado_1").hidden=false; 
-            document.getElementById("ahorcado_2").hidden=true;   
-            break;                     
+            document.getElementById("ahorcado_1").hidden=false;
+            document.getElementById("ahorcado_2").hidden=true;  
+            break;                    
 }  
-            
+           
     }
     function Amaga(){
          document.getElementById("ahorcado_0").hidden=true;
@@ -270,30 +255,71 @@
          document.getElementById("ahorcado_2").hidden=true;
          document.getElementById("ahorcado_3").hidden=true;
          document.getElementById("ahorcado_4").hidden=true;
-         document.getElementById("ahorcado_5").hidden=true; 
+         document.getElementById("ahorcado_5").hidden=true;
          document.getElementById("ahorcado_6").hidden=false;    
      }  
-            
+           
     function AturaTot(){
-           document.getElementById("valor").disabled=true; 
+         document.getElementById("valor").disabled=true;
          document.getElementById("Comprovar").disabled=true;
     }  
 
-        function CanviarIdioma(IdIdioma){
-            alert("CanviarIdioma");
-            if((IdIdioma !="ca")&&(IdIdioma !="es")){
-                document.getElemntById("Idiomes").value=IdIdioma;
-            }
-        
-        
+    function CanviarIdioma(IdIdioma) {
+        if ((IdIdioma != "ca") && (IdIdioma != "es")) {
+            document.getElementById("Idiomes").value = IdIdioma;
+        }
+
         AlaWeb_SQLite(IdIdioma);
-        Idioma=Idiomes.find(Idioma=>Idioma.IdIdioma==IdIdioma);
-        
-        document.title=Idioma.Titol;
-        document.getElemntById("Versio").innerHTML=Idioma.Versio;
-        document.getElemntById("valor").placeholder=Idioma.Input;
-        document.getElemntById("Comprovar").innerHTML=Idioma.Comprovar;
+        Idioma = Idiomes.find(Idioma => Idioma.IdIdioma == IdIdioma);
+
+        // Canviam els diferents literals de la GUI segons l'idioma        
+        document.title = Idioma.Titol;
+        document.getElementById("Versio").innerHTML = Idioma.Versio;
+        document.getElementById("valor").placeholder = Idioma.Input;
+        document.getElementById("Comprovar").innerHTML = Idioma.Comprovar;
+
+
+        // Escull una nova paraula aleatòriament
+        window.alert("Nova paraula aleatòria / Nueva palabra aleatoria / New random word!");
+        aleatori = Math.floor(Math.random() * Taula.length);
+        paraula = Taula[aleatori].Paraula;
+        pista = Taula[aleatori].Pista;
+       
+        Paraula = [];
+        // Marcam cada lletra amb un "_"
+        for (var i = 0; i < paraula.length; i++) {
+            Paraula[i] = "_";
+        }
+        document.getElementById("paraula").innerHTML = Paraula;
+
+        for (var i = 0; i < Vides_dft - Vides; i++) {
+            Lletres[i] = "_";
+        }
+        document.getElementById("lletres").innerHTML = Lletres;
+
+        Vides = Vides_dft;    
+        document.getElementById("vides").innerHTML =
+                "&nbsp;&nbsp;&nbsp;\n\
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + Vides;
+
+        AmagaForca();
+       
+        // Bandera de la paraula/pista
+        if (IdIdioma_ant == "en") { IdIdioma_ant = "gb"; }                                
+        document.getElementById("bandera").src = "img/" + IdIdioma_ant + ".png";                      
+        IdIdioma_ant = IdIdioma;
+       
+        // Bandera del textos de la GUI
+        if ((IdIdioma != "ca") && (IdIdioma != "es")) {
+            // Per a l'idioma "en = English" la bandera es la de "gb = Great Britain"  
+            if (IdIdioma == "en") { IdIdioma = "gb"; }                                
+            document.getElementById("gb").src = "img/" + IdIdioma + ".png";        
+        }
     }
+
+
+
+
 
     // Funció per carregar la base de dades penjat.db
     function AlaWeb_SQLite(IdIdioma) {
@@ -305,10 +331,11 @@
         // Recuperam de la base de dades els TextosGUI per tots els Idiomes
         alasql('ATTACH SQLITE DATABASE penjat("db/penjat.db"); USE penjat; \n\
                 SELECT * FROM TblTextosGUI;',
-            [], function(idiomes) {Print_Data(Idiomes = idiomes.pop());}
-            //[], function(idiomes) {SQL_TblTextosGUI(IdIdioma, idiomes.pop());}
+            //[], function(idiomes) {Print_Data(Idiomes = idiomes.pop());}
+            [], function(idiomes) {SQL_TblTextosGUI(IdIdioma, idiomes.pop());}
         );
 
+        /*
         alasql('ATTACH SQLITE DATABASE penjat("db/penjat.db"); USE penjat; \n\
                 SELECT Paraula,Pista \n\ \n\
                 FROM TblParaules INNER JOIN TblPistes \n\
@@ -316,13 +343,11 @@
                 WHERE TblParaules.IdIdioma="'+ IdIdioma +'";',
             [], function(taula) {Print_Data(Taula = taula.pop());}
             //[], function(taula) {SQL_TblTextosGUI(IdIdioma, idiomes.pop());}
-        
+       
         );
-  } 
-        
-        
-        
-        
+         */
+  }
+       
         function SQL_TblTextosGUI(IdIdioma,TblTextosGUI){
             Idiomes=TblTextosGUI;
             if(Idiomes.length==0){Idiomes=Idiomes_dft;};
@@ -330,21 +355,20 @@
                 window.alert("GUI:Idioma no trobat/Idioma no encontrado/Lenguage not found!");
                 idiomes=Idiomes_dft;
             }
-            
+           
         }
-                     
-    
+       
     // Print data  
     function Print_Data(res) {
         for (var i in res)
         {
-           console.log("row " + i);
-           document.getElementById("res").innerHTML += "<br>";
+           // console.log("row " + i);
+           // document.getElementById("res").innerHTML += "<br>";
            for (var j in res[i])
              {
-              console.log(" " + res[i][j]);
-              document.getElementById("res").innerHTML += res[i][j] + ", ";
+              // console.log(" " + res[i][j]);
+              // document.getElementById("res").innerHTML += res[i][j] + ", ";
               window.alert("res[" + i + "][" +j + "] = " + res[i][j]);
              }
         }
-    } 
+    }
